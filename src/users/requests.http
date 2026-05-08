@@ -1,0 +1,57 @@
+### Create a new user
+
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+  "email": "user24@abc.com",
+  "password": "password@123"
+}
+
+### Signup a new user
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+  "email": "user24@abc.com",
+  "password": "password@123"
+}
+
+### Signout
+POST http://localhost:3000/auth/signout
+
+### Get a user with Id
+
+GET http://localhost:3000/auth/2
+
+
+### Get all users
+GET http://localhost:3000/auth?email=user@example.com
+
+### Remove a user with Id
+
+DELETE http://localhost:3000/auth/123
+
+
+### Update a user with patch request
+
+PATCH http://localhost:3000/auth/2343
+Content-Type: application/json
+
+{
+  "email": "updated@example.com"
+}
+
+
+### Get the session color
+
+GET http://localhost:3000/auth/colors/red
+
+
+
+### Get the color
+GET http://localhost:3000/auth/colors
+
+
+### Get whoami
+GET http://localhost:3000/auth/whoami
