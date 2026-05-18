@@ -93,6 +93,19 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 - Website - [https://nestjs.com](https://nestjs.com/)
 - Twitter - [@nestframework](https://twitter.com/nestframework)
 
+## Migration updated script
+
+1. Create a ***data-source.ts*** file in root directory
+2. Use the following command:
+```bash
+npm run typeorm -- migration:generate migrations/initial-schema -d data-source.ts
+npm run typeorm -- migration:run -d data-source.ts
+```
+3. To revert migrations:
+```bash
+npm run typeorm -- migration:revert -d data-source.ts
+```
+
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).

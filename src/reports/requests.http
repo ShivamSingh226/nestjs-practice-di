@@ -1,0 +1,23 @@
+POST http://localhost:3000/reports
+Content-Type: application/json
+
+{
+    "make": "Toyota",
+    "model": "Camry",
+    "year": 2020,
+    "mileage": 15000,
+    "price": 20000,
+    "lat": 0,
+    "lng": 0
+}
+
+### PATCH REQUEST TO APPROVE A REPORT
+PATCH http://localhost:3000/reports/3
+Content-Type: application/json
+
+{
+    "approved": false
+}
+
+### GET REQUEST TO GET ESTIMATE
+GET http://localhost:3000/reports?make=Toyota&model=Camry&lng=0&lat=0&year=2020&mileage=15000
